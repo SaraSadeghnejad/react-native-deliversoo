@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, TextInput, ScrollView } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import {useNavigation} from "@react-navigation/native"
 import Categories from '../components/Categories'
+import FeaturedRow from '../components/FeaturedRow'
 const HomeScreen = () => {
   const navigation = useNavigation()
     useLayoutEffect (()=>{
@@ -44,6 +45,22 @@ const HomeScreen = () => {
           contentContainerStyle={{ paddingBottom:100}}
         >
             <Categories />
+             <FeaturedRow
+             id="123"
+              title="Featured"
+              description="Paid placement from our partners"
+              />
+               <FeaturedRow 
+               id="456"
+              title="Offers near you!"
+              description="Why not support your local restaurant tonight"
+              />
+               <FeaturedRow
+               id="789"
+              title="Tasty Discounts"
+              description="Everyone's been enjoying these juicy discounts"
+              />
+
         </ScrollView>
     </SafeAreaView>
   )
